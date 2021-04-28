@@ -1,12 +1,12 @@
 # DTO Proof of Concept
 
-This POC is developed with Angular 11 as frontend and Dot net core 3.1 as Backend.
+This POC is developed with Angular 11 and Dot net core 3.1.
 
 ## Installation
 
 Click on the "installer.bat" in the current path.
 
-This will run the Dot net application in localhost- "https://localhost:5001" or "http://localhost:5000"
+This will automatically run the Dotnet application in localhost- "https://localhost:5001" or "http://localhost:5000"
 
 And it will open the Angular application in browser with the datas binded from backend, after 5 secs.
 
