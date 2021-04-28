@@ -1,0 +1,37 @@
+<main>
+    <section #tabs>
+        <div *ngFor="let each of tableData; let i = index" [ngClass]="i==0?'active':''"
+            (click)="showView(each['Project Name']);setActive($event.target, i)">
+            {{each.samplingTime}}
+        </div>
+
+    </section>
+
+    <section>
+
+        <div *ngFor="let each of keys;"> 
+            <ng-container *ngIf="each.toLowerCase() == 'is construction completed'; else numbers">
+                <span>{{each}}</span>
+                <input type="checkbox" class="checkbox" [(ngModel)]="viewData[each]" [ngModelOptions]="{standalone: true}">  
+            </ng-container>
+
+            <ng-template #numbers>
+                <ng-container *ngIf="each.toLowerCase()=='construction count' || each.toLowerCase()=='length of the road'; else text">
+                    <span>{{each}}</span>
+                    <input type="number" class="number" [(ngModel)]="viewData[each]" [step]="each.toLowerCase()=='length of the road'?0.1:1" [ngModelOptions]="{standalone: true}">
+                    <small *ngIf="each.toLowerCase()=='length of the road'">Km</small>
+                </ng-container>
+            </ng-template>
+
+            <ng-template #text>
+                <span>{{each}}</span>
+                <input type="text" class="text" [(ngModel)]="viewData[each]" [ngModelOptions]="{standalone: true}"/>
+            </ng-template>
+
+
+        </div>
+
+        <button (click)="saveForm()">Save</button>
+
+    </section>
+</main>

@@ -1,0 +1,99 @@
+.table-wrapper{
+    margin:40px 40px 0px 40px;
+    display: grid;
+}
+
+.table-wrapper-inside{
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    color: #00072b;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 25px;
+    border: solid 1px lightgray;
+
+    .UpDownIcon{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        &>img:nth-child(1){
+            width: 27px;
+            margin-left: 2px;
+        }
+
+        &>img:nth-child(2){
+            height: 14px;
+            width: 30px;
+        }
+    }
+
+    tr:nth-child(even) {
+        background: #f8f9fb;
+        box-shadow: inset -1px 0px 0px #eeeeee;
+    }
+    tr:nth-child(odd) {
+        background: #e1e9f7;
+        box-shadow: inset -1px 0px 0px #eeeeee;
+    }
+
+    td,
+    th {
+        border-right: solid 1px lightgray;
+        border-left: solid 1px lightgray;
+        border-top: none !important;
+        border-bottom: none !important;
+        height: 48px;
+        padding-left: 15px !important;
+    padding-right: 8px !important;
+        white-space: nowrap;
+    }
+
+    thead {
+        background: #ffffff;
+        th {
+            height: 55px;
+            img {
+                padding-top: 3px;
+                margin-left: 0px;
+                cursor: pointer;
+            }
+            span {
+                text-transform: capitalize;
+            }
+        }
+
+        th:last-child{
+            text-align: center;
+        }
+
+    }
+
+    tbody{
+        button{
+            width: 80px;
+            padding: 2px 5px 2px 5px;
+            border: none;
+            background-color: #53caa6;
+            border-radius: 4px;
+            color: #fefefe;
+            cursor: pointer;
+            text-align: center;
+            height: 26px;
+
+            &:hover {
+              box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+
+        td{
+            text-align: center;
+        }
+    }
+}

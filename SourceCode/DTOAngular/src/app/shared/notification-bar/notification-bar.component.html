@@ -1,0 +1,9 @@
+<main class="d-flex align-items-center" [style.backgroundColor]="bgColor">
+    <section class="d-flex align-items-center">
+        <img src='../../../assets/images/failure-status-white.svg'>
+        <span>{{message}}</span>
+    </section>
+    <section class="ml-auto">
+        <img (click)="onClose()" src='../../../assets/images/cross-white.svg'>
+    </section>
+</main>

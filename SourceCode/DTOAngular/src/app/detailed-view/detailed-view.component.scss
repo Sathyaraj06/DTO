@@ -1,0 +1,114 @@
+main{
+    margin: 40px 40px 20px 40px;
+    display: flex;
+    height: 75vh;
+    border: 1px solid #e1e9f7;
+
+    &>section:nth-child(1){
+        height: 100%;
+        width: 35%;
+        box-sizing: border-box;
+        border: 1px solid #e1e9f7;
+
+        &>div{
+            height: 35px;
+            padding: 10px;
+            border: 1px solid #e1e9f7;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #e1e9f7;
+                // color: #fefefe;
+            }
+        }
+    }
+
+    &>section:nth-child(2){
+        height: 100%;
+        width: 65%;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        border: 1px solid lightgray;
+
+        &>div{
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        button{
+            width: 80px;
+            padding: 2px 5px 2px 5px;
+            border: none;
+            background-color: #53caa6;
+            border-radius: 4px;
+            color: #fefefe;
+            cursor: pointer;
+            text-align: center;
+            height: 30px;
+            float: right;
+          
+            &:hover {
+              box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+
+        span {
+            display: block;
+            width: 40%;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+        small{
+            padding-top: 15px;
+            position: absolute;
+            right: 120px;
+        }
+
+        input {
+            &.text, &.number {
+                width: calc(100% - 20px);
+                max-width: 100% !important;
+                height: 40px;
+                border-radius: 6px;
+                border: 1.5px solid #dfdfe0;
+                padding-left: 13px;
+            }
+            &::placeholder {
+                color: #b3b3b3;
+                font-size: 12px;
+                opacity: 1;
+            }
+            &:-ms-input-placeholder {
+                color: #b3b3b3;
+                font-size: 12px;
+            }
+            &::-ms-input-placeholder {
+                color: #b3b3b3;
+                font-size: 12px;
+            }
+        }
+
+        input[type="checkbox"] {
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+    }
+
+    
+}
+
+.active{
+    background-color: #53caa6;
+    color: #fefefe;
+
+    &:hover{
+        background-color: #53caa6 !important;
+        color: #fefefe !important;
+    }
+}

@@ -1,0 +1,25 @@
+<div class="table-wrapper">
+
+    <div class="table-wrapper-inside">
+        <table>
+            <thead>
+                <th *ngFor="let each of keys">
+                    <div class="d-flex justify-content-center align-items-center header-field">
+                        <span> {{each}}</span>
+                    </div>
+                </th>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of tableData">
+                    <td *ngFor="let header of keys">
+                        <span>{{row[header]}}</span>
+                    </td>
+
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
