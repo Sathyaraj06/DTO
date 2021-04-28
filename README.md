@@ -10,7 +10,7 @@ This will automatically run the Dotnet application in localhost- "https://localh
 
 And it will open the Angular application in browser with the datas binded from backend, after 5 secs.
 
-##Folder Path
+## Folder Path
 
 /DTO - Published code of Dot net application.
 
